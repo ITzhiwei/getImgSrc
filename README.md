@@ -1,8 +1,8 @@
 # getImgSrc
 获取HTML字符串中的图片地址
-用法示例：
-use lipowei\imgSrc\GetImgSrc;
-$htmlStr = '<div>MainDiv<img src="a1.png"/><img src="a2.png"/></div>';
+用法示例：  
+use lipowei\imgSrc\GetImgSrc;  
+$htmlStr = '<div>MainDiv<img src="a1.png"/><img src="a2.png"/></div>';  
 $imgSrc = GetImgSrc::src($htmlStr, 1);
 
     /**
