@@ -1,0 +1,20 @@
+{
+    "name": "lipowei/img",
+    "description": "高效率字符串模式从HTML字符串中提取图片的src，可指定提取第几张图片、顺数第几或逆数第几、可指定黑名单等。",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0",
+    "autoload": {
+      "psr-4": {
+        "lipowei\\imgSrc\\": "imgSrc/",
+      }
+    },
+    "authors": [
+        {
+            "name": "wuzhiwei",
+            "email": "2394599321@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
