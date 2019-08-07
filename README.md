@@ -3,7 +3,7 @@
 用法示例：  
 use lipowei\imgSrc\GetImgSrc;  
 $htmlStr = '这里可以是新闻、公告等字符串，想在该字符串中提取出图片的src';  
-$imgSrc = GetImgSrc::src($htmlStr, 1);
+$imgSrc = GetImgSrc::src($htmlStr, 1);//获取首张图片的src
 
     /**
      * 提取HTML文章中的图片地址
