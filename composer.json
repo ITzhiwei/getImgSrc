@@ -1,6 +1,6 @@
 {
     "name": "lipowei/img",
-    "description": "高效率字符串模式从HTML字符串中提取图片的src，可指定提取第几张图片、顺数第几或逆数第几、可指定黑名单等。例子：获取文章中的首张图片地址 use lipowei\imgSrc\GetImgSrc; $imgSrc = GetImgSrc::src($htmlStr, 1);",
+    "description": "高效率字符串模式从HTML字符串中提取图片的src，可指定提取第几张图片、顺数第几或逆数第几、可指定黑名单等。例子：获取文章中的首张图片地址 `use lipowei\imgSrc\GetImgSrc;$imgSrc = GetImgSrc::src($htmlStr, 1);`",
     "type": "library",
     "license": "MIT",
     "version": "1.0",
