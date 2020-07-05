@@ -2,7 +2,7 @@
 获取HTML字符串中的图片地址
 用法示例： 
    
-use lipowei\imgSrc\GetImgSrc;  
+use tcwei\smallTools\GetImgSrc;  
 $htmlStr = '这里可以是新闻等文章或者html内容';   
 //获取首张图片的src   
 $imgSrc = GetImgSrc::src($htmlStr, 1);

@@ -1,6 +1,6 @@
 <?php
    
-namespace lipowei\imgSrc;
+namespace tcwei\smallTools;
 
 class GetImgSrc{
    
