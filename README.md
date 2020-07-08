@@ -1,4 +1,4 @@
-#安装
+# 安装  
 composer安装： composer require tcwei/imgsrc
 # GetImgSrc::src 单张获取(可比普通正则获取快3倍)
 获取HTML字符串中的图片地址
