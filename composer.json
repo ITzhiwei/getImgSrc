@@ -3,7 +3,7 @@
     "description": "高效率字符串模式（可比正则获取快3倍）从HTML或者文章内容等字符串中提取图片的src，可指定提取第几张图片、顺数第几或逆数第几、可指定黑名单等。页面下面有使用例子：",
     "type": "library",
     "license": "MIT",
-    "version": "v2.0",
+    "version": "v2.01",
     "autoload": {
       "psr-4": {
         "tcwei\\smallTools\\": "imgSrc/"
