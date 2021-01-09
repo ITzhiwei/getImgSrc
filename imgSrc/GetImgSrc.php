@@ -11,7 +11,7 @@ class GetImgSrc{
      * @param string $order 顺取倒取； 默认为 asc ，从正方向计数。 desc 从反方向计数
      * @param string|array $blacklist 图片地址黑名单，排除图片地址中包含该数据的地址；例如 传入 baidu.com  会排除 src="http://www.baidu.com/img/a.png"
      * @param string $model 默认为字符串模式;可取值 string  preg；string模式处理效率高，PHP版本越高速度越快，可比正则快几倍
-     * @return false | null | src  当data为空时返回 false ， src不存在时返回 null ，反之返回src
+     * @return false| null | src  当data为空时返回 false ， src不存在时返回 null ，反之返回src
      */
     public static function src($data, $num = 1, $order = 'asc', $blacklist = false, $model = 'string'){
         
@@ -53,7 +53,7 @@ class GetImgSrc{
      * @param string $order 顺取倒取； 默认为 asc ，从正方向计数。 desc 从反方向计数
      * @param string|array $blacklist 图片地址黑名单，排除图片地址中包含该数据的地址；例如 传入 img.baidu.com  会排除 src="img.baidu.com/a.png"
      * @param string $model 抽取集合时，默认为正则模式；可选模式：preg  string，当 $length > 3 或者 $length = 0时，强制使用正则模式，因为取的数量大时，正则速度更快。
-     * @return 图片地址的集合数组，若无则返回空数组[]
+     * @return array 图片地址的集合数组，若无则返回空数组
      */
     public static function srcList($data, $startNum = 1, $length = 0, $order = 'asc', $blacklist = false, $model = 'preg'){
         if($model === 'preg' || $length > 3 || $length === 0){
@@ -147,7 +147,7 @@ class GetImgSrc{
             $imgSrcArr = [];
             foreach($img as $key=>$value){
                 $imgSrc = $value;
-                 $pregModel='/src=(\'|\")((?:(?!\1).)*?)(\1)/isU';
+                $pregModel='/src=(\'|\")(.*)(?:\1)/isU';
                 preg_match_all($pregModel, $imgSrc, $img1);
                 if(is_array($blacklist)){
                     $blacklistBool = true;
@@ -173,7 +173,7 @@ class GetImgSrc{
         }else{
             if(!empty($img[$num])){
                 $imgStr = $img[$num];
-              $pregModel='/src=(\'|\")((?:(?!\1).)*?)(\1)/isU';
+                $pregModel='/src=(\'|\")(.*)(?:\1)/isU';
                 preg_match_all($pregModel, $imgStr, $img1);
                 return $img1[2][0];
             }else{
@@ -198,7 +198,7 @@ class GetImgSrc{
             </div>';
     
     $src = GetImgSrc::srcList($str, 2, 3, 'asc', false, 'string');
-    $src2 = GetImgSrc::src($str, 2, 3, 'asc', false);
+    $src2 = GetImgSrc::src($str, 1, 'asc', false, 'string');
     
     var_dump($src);
     var_dump($src2);
