@@ -147,7 +147,7 @@ class GetImgSrc{
             $imgSrcArr = [];
             foreach($img as $key=>$value){
                 $imgSrc = $value;
-                $pregModel='/src=(\'|\")(.*)(?:\1)/isU';
+                $pregModel='/src=(\'|")(.*)(?:\1)/isU';
                 preg_match_all($pregModel, $imgSrc, $img1);
                 if(is_array($blacklist)){
                     $blacklistBool = true;
@@ -173,7 +173,7 @@ class GetImgSrc{
         }else{
             if(!empty($img[$num])){
                 $imgStr = $img[$num];
-                $pregModel='/src=(\'|\")(.*)(?:\1)/isU';
+                $pregModel='/src=(\'|")(.*)(?:\1)/isU';
                 preg_match_all($pregModel, $imgStr, $img1);
                 return $img1[2][0];
             }else{
