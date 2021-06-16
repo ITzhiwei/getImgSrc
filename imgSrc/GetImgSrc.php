@@ -32,7 +32,7 @@ class GetImgSrc{
                     }
                     return $imgSrc;
                 }else{
-                    if($blacklist === false || strpos($imgSrc, $blacklist) === false){
+                    if($blacklist === false || strpos($imgSrc, (string)$blacklist) === false){
                         return $imgSrc;
                     }else{
                         return self::src($data, $num+1, $order, $blacklist, $model);   
@@ -75,7 +75,7 @@ class GetImgSrc{
                             $length++;
                         }
                     }else{
-                        if ($blacklist === false || strpos($imgSrc, $blacklist) === false) {
+                        if ($blacklist === false || strpos($imgSrc, (string)$blacklist) === false) {
                             $imgSrcArr[] = $imgSrc;
                         }else{
                             $length++;
@@ -160,7 +160,7 @@ class GetImgSrc{
                         $imgSrcArr[] = $img1[2][0];
                     };
                 } else {
-                    if ($blacklist === false || strpos($img1[2][0], $blacklist) === false) {
+                    if ($blacklist === false || strpos($img1[2][0], (string)$blacklist) === false) {
                         $imgSrcArr[] = $img1[2][0];
                     };
                 }
